@@ -1,0 +1,22 @@
+#%RAML 1.0 DataType
+
+
+description: Schema of a Game object on MongoDB
+
+type: object
+properties:
+  name: string
+  released: date-only
+  platforms: array
+  genres: array
+  stores: array
+  rating: number
+  top_rating:
+    type: object
+    properties:
+      id: integer
+      title: string
+      count: integer
+      percent: number
+
+    

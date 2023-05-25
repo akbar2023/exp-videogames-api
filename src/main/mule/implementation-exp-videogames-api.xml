@@ -5,7 +5,7 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
 http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
 	<http:request-config name="HTTP_Request_configuration" doc:name="HTTP Request configuration" doc:id="8b806f3d-30d1-49b3-a4f7-c25058e20d4c" >
-		<http:request-connection host="localhost" port="8090" connectionIdleTimeout="500000"/>
+		<http:request-connection host="localhost" port="8083" connectionIdleTimeout="500000"/>
 	</http:request-config>
 	<flow name="get-games-flow" doc:id="1d1de646-62ef-457d-8c89-50d8f34f0ac6" >
 		<http:request method="GET" doc:name="GET prc-videogames-api" doc:id="10e32be4-0108-4888-b737-8756f4d47fdc" config-ref="HTTP_Request_configuration" path="/api/games">

@@ -1,0 +1,40 @@
+#%RAML 1.0
+title: exp-videogames-api
+
+types:
+  Game: !include data-types/game.raml
+
+
+/games:
+  description: Add games from rawg.io to mongoDB 
+  post:
+    responses:
+      201:
+        body:
+          application/json:
+            example: 
+              { 
+                "message": "Success !",
+                "Total Records": 250
+              }
+     
+  
+  get:
+    queryParameters:
+      released?: date-only
+      platforms?: array
+      genres?: array
+      stores?: array
+      rating?: 
+        type: string
+        enum: [best, worst]
+    responses:
+      200:
+        body:
+          application/json:
+            type: Game[]
+            example: !include examples/games.raml
+
+                
+
+            
